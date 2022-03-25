@@ -25,6 +25,8 @@ namespace Flow.Launcher.Plugin.Explorer.Views
 
         public ExplorerSettings(SettingsViewModel viewModel)
         {
+            DataContext = viewModel;
+            
             InitializeComponent();
 
             this.viewModel = viewModel;
@@ -307,7 +309,7 @@ namespace Flow.Launcher.Plugin.Explorer.Views
 
         private void btnOpenIndexingOptions_Click(object sender, RoutedEventArgs e)
         {
-            viewModel.OpenWindowsIndexingOptions();
+            SettingsViewModel.OpenWindowsIndexingOptions();
         }
     }
 
